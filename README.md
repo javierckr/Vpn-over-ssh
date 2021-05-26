@@ -5,7 +5,7 @@ Bash script for tunneling all traffic over ssh
 ### Requierements
 
 This script only works on linux, server and host, you need super cow
-privileges in both.
+powers in both.
 
 This script will transform your ssh server into a gateway, but all changes it makes are restored at 
 reboot.
