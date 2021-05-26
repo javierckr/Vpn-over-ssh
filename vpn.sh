@@ -22,7 +22,7 @@ ssh \
   -o PermitLocalCommand=yes \
   -o ServerAliveInterval=60 \
   -o TCPKeepAlive=yes \
-  -w 3:3 pi@ssh.javier.eu.org \
+  -w 3:3 $user@$server \
   'interface=$(ip route | grep "default" | cut -d " " -f 5| head -n 1);echo Nat interface: $interface;
    sudo ip tuntap add dev tun3 mode tun 2>/dev/null;echo creating interface tun3 server;
    sudo ip link set tun3 up 2>/dev/null;echo tun3 up;
