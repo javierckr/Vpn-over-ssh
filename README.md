@@ -14,6 +14,7 @@ The script uses ip tables and iproute2, usually installed by default.
 ### Dependencies
 
 Client packages: `bash iproute2 systemd openssh bind9-host`
+
 Server packages: `bash iproute2 iptables openssh sudo`
 
 ### Use instructions
