@@ -13,14 +13,14 @@ SOCKET=/tmp/vpn-ssh.socket  # Socket path for ssh control
 # Run as root, of course.
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-    echo "Must be root to run this script."
+    echo "Must be root to run this script." >&2
     exit $E_NOTROOT
 fi
 
 # Correct number of arguments passed to script?
 if [ $# -ne $ARGS ]
 then
-    echo "Usage: $(basename $0) user server"
+    echo "Usage: $(basename $0) user server" >&2
     exit $E_BADARGS
 fi
 
