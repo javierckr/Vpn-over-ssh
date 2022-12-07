@@ -93,8 +93,8 @@ echo "Type # vpnoff for disconnect or /usr/local/sbin/vpnoff"
     do
         echo "ip route del $i via $gateway dev $hostinterface &> /dev/null"
     done
-        echo "ssh -S $SOCKET -O exit $server"
-        echo "echo Bye"
-        echo "rm \$0"
+    echo "ssh -S $SOCKET -O exit $server"
+    echo "echo Bye"
+    echo "rm \$0"
 } > /usr/local/sbin/vpnoff
 chmod 750 /usr/local/sbin/vpnoff
