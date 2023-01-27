@@ -43,11 +43,14 @@ exitn (){ # A nice exit $1: ssh pid $2: exit status
         exit $1
     fi
 }
+
+# Trap ctrl-c
 trap ctrl_c INT
 function ctrl_c() {
     exitn "$SOCKET" "0"
 }
 
+# Variables
 gateway=$(ip route | grep "default" | cut -d " " -f 3 | head -n 1)
 hostinterface=$(ip route | grep "default" | cut -d " " -f 5| head -n 1)
 dns=$(systemd-resolve --status |\
